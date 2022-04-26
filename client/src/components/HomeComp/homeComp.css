@@ -92,10 +92,11 @@
 
 .why-info {
     width: 80%;
+    max-width: 1000px;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 60px;
 }
 
 .whys > h2 {
