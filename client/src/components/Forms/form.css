@@ -1,0 +1,36 @@
+.short-form {
+    width: 80%;
+}
+
+.short-form > label {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.short-form > input, select {
+    width: 100%;
+    padding: 10px;
+}
+
+.short-form > button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    color: white;
+    background-color: rgb(167, 0, 83);
+    font-weight: 700;
+}
+
+.short-form > button:hover {
+    background-color: rgb(102, 0, 51);
+}
+
+.consent {
+    font-size: 10px;
+}
+
+@media screen and (max-width: 1130px) {
+    .short-form {
+        margin: 0 auto;
+    }
+}

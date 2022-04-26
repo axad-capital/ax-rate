@@ -17,6 +17,7 @@ function App() {
         <NavComp />
         <Routes>
           <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/get-quote' element={<HomePage />} />
           <Route exact path='/about-us' element={<About />} />
           <Route exact path='/info' element={<Info />} />
           <Route exact path='/blogs' element={<Blog />} />
