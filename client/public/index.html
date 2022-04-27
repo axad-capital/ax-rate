@@ -115,12 +115,14 @@
     });
   </script>
 
-  <!-- <script type="text/javascript" src="https://www.a1jkghtrk.com/scripts/sdk/everflow.js"></script>
+  <script type="text/javascript" src="https://www.a1jkghtrk.com/scripts/sdk/everflow.js"></script>
     <script type="text/javascript">
-      EF.conversion({
-        offer_id: 1271,
-      });
-    </script> -->
+      if (window.location.href === 'https://axrate.netlify.app/thanks' || window.location.href === 'https://axrate.com/thanks' ) {
+        EF.conversion({
+          offer_id: 1271,
+        });
+      }
+    </script>
   <!-- everflow end -->
 
 </body>
