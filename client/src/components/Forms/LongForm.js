@@ -14,8 +14,8 @@ const LongForm = () => {
             id: uuidv4()
         }
     
-        localStorage.setItem('ax-rate-data', JSON.stringify(formData))
-        window.location.href = '/thanks'
+        localStorage.setItem('ax-rate-data-long', JSON.stringify(formData))
+        window.location.href = '/thanks-long'
     }
 
     return (
@@ -52,16 +52,16 @@ const LongForm = () => {
                 <label htmlFor="dui">Do You Have A DUI/DWI?</label>
                 <br />
                 <select type="text" name="dui" id="dui">
-                    <option value="Yes">Yes</option>
                     <option value="No">No</option>
+                    <option value="Yes">Yes</option>
                 </select>
                 <br />
 
                 <label htmlFor="sr-22">Do You Have Any SR-22?</label>
                 <br />
                 <select type="text" name="sr-22" id="sr-22">
-                    <option value="Yes">Yes</option>
                     <option value="No">No</option>
+                    <option value="Yes">Yes</option>
                 </select>
                 <br />
 

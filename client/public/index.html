@@ -75,11 +75,11 @@
 
   <script>
     if (window.location.href === 'http://localhost:3000/thanks-long' || window.location.href === 'https://axrate.netlify.app/thanks-long' || window.location.href === 'https://axrate.com/thanks-long') {
-      let data = JSON.parse(localStorage.getItem('ax-rate-data'))
+      let dataLong = JSON.parse(localStorage.getItem('ax-rate-data-long'))
       console.log('auto');
 
       cInsstate = ""; //State ID For Example: AL
-      cInszip = data.zip; // Zip Code For Example: 35004
+      cInszip = dataLong.zip; // Zip Code For Example: 35004
       cInsmaxads = "5"; //Max ads the affiliate want to display
       cInspublisher_id = "887"; // Publisher Unique ID
       cInssub_id = ""; //Sub ID
