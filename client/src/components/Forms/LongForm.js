@@ -14,7 +14,7 @@ const LongForm = () => {
             id: uuidv4()
         }
     
-        localStorage.setItem('ax-rate-data-long', JSON.stringify(formData))
+        localStorage.setItem('ax-rate-data', JSON.stringify(formData))
         window.location.href = '/thanks-long'
     }
 
