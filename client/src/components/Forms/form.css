@@ -2,17 +2,18 @@
     width: 80%;
 }
 
-.short-form > label {
+.short-form>label {
     font-weight: 700;
     margin-top: 20px;
 }
 
-.short-form > input, select {
+.short-form>input,
+select {
     width: 100%;
     padding: 10px;
 }
 
-.short-form > button {
+.short-form>button {
     width: 100%;
     margin-top: 10px;
     padding: 8px;
@@ -21,7 +22,7 @@
     font-weight: 700;
 }
 
-.short-form > button:hover {
+.short-form>button:hover {
     background-color: rgb(102, 0, 51);
 }
 
@@ -33,16 +34,34 @@
     -webkit-animation: fadein .8s;
 }
 
+.previous-container {
+    text-align: center;
+}
+
+#previous {
+    background-color: rgb(65, 105, 151);
+    max-width: 200px;
+    border-radius: 20px;
+}
+
+#previous:hover {
+    background-color: red;
+}
+
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .form-container {
     width: 80%;
     margin: 20px auto;
-    max-width: 500px;
-
+    max-width: 1000px;
 }
 
 .form-title-container {
@@ -54,7 +73,8 @@
     margin-top: 20px;
 }
 
-.form-container input, select {
+.form-container input,
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid black;
@@ -79,8 +99,45 @@
     color: rgb(8, 168, 0);
 }
 
+.long-form-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.long-form-img-container {
+    width: 50%;
+}
+
+.long-form-form-container {
+    width: 50%;
+}
+
+.long-form-img {
+    width: 100%;
+}
+
 @media screen and (max-width: 1130px) {
     .short-form {
         margin: 0 auto;
+    }
+
+
+    .long-form-container {
+        display: block;
+    }
+
+    .long-form-img-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .long-form-form-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .long-form-img {
+        width: 100%;
     }
 }

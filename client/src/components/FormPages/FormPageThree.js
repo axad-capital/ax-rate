@@ -4,7 +4,11 @@ const FormPageThree = (props) => {
     return (
         <div>
             <div className="form-extra-info">
-            <h5 className='long-form-steps'>Step 3 of 3</h5>
+                <h5 className='long-form-steps'>Step 3 of 3</h5>
+                <div className='previous-container'>
+                    <button id='previous' onClick={props.last}>Start Over</button>
+                </div>
+                <br />
                 {/* <label htmlFor="requested-coverage">Requested Insurance Coverage</label>
                 <br />
                 <select name="requested-coverage" id="requested-coverage">
@@ -114,7 +118,7 @@ const FormPageThree = (props) => {
                 <p className='consent'>By clicking “Yes” I provide my signature expressly consenting to contact from GetMyAutoInsured.com, its subsidiaries, affiliates, or agents, and up to eight of its Marketing Partners at the number I provided even if on a federal, state, or local do not call list regarding products or services via live, automated or prerecorded telephone call, text, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of any purchase. I understand that I can revoke this consent through any reasonable means. I agree to the Terms of Use and Privacy Policy</p>
                 <br />
 
-                <button onClick={props.last}>Previous</button>
+                {/* <button onClick={props.last}>Previous</button> */}
                 <button onClick={props.longFormSubmit} className='form-btn'>Submit</button>
             </div>
         </div>
