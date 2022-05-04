@@ -29,7 +29,14 @@
     font-size: 10px;
 }
 
+.form-extra-info {
+    -webkit-animation: fadein .8s;
+}
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 .form-container {
     width: 80%;
@@ -67,6 +74,10 @@
     background-color: rgb(102, 0, 51);
 }
 
+.long-form-steps {
+    text-align: center;
+    color: rgb(8, 168, 0);
+}
 
 @media screen and (max-width: 1130px) {
     .short-form {
