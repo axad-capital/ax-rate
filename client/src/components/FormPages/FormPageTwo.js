@@ -90,7 +90,8 @@ const FormPageTwo = (props) => {
                 )}>
                     Next
                 </button>
-
+                <br />
+                <p style={{ textAlign: "center", color: "red", fontWeight: 600 }}>{props.errorText}</p>
             </div>
         </div>
     )

@@ -12,6 +12,7 @@ import Partners from './pages/Legal/Partners';
 import Thanks from './components/Thanks/Thanks';
 import ThanksLong from './components/Thanks/ThanksLong';
 import PingPostLongForm from './components/Forms/PingPostLongForm';
+import ThanksPing from './components/Thanks/ThanksPing';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/thanks' element={<Thanks />} />
           <Route exact path='/thanks-long' element={<ThanksLong />} />
           <Route exact path='/long-quote' element={<PingPostLongForm />} />
+          <Route exact path='/thank-you-ping-form' element={<ThanksPing />} />
         </Routes>
       </Router>
     </div>

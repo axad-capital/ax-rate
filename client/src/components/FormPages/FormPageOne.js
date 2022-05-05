@@ -32,6 +32,7 @@ const FormPageOne = (props) => {
                 <div className="form-page-one-btn">
                     <button type='submit' onClick={() => props.next(document.getElementById('zipcode').value, document.getElementById('homeowner').value, document.getElementById('insured').value)}>Next</button>
                 </div>
+                <p style={{ textAlign: "center", color: "red", fontWeight: 600 }}>{props.errorText}</p>
             </div>
         </div>
     )

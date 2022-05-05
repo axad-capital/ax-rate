@@ -130,6 +130,7 @@ const FormPageThree = (props) => {
                     document.getElementById('mileage').value
                 )} className='form-btn'>Submit</button>
             </div>
+            <p style={{ textAlign: "center", color: "red", fontWeight: 600 }}>{props.errorText}</p>
         </div>
     )
 }
