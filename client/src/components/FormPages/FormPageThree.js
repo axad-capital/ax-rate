@@ -115,11 +115,20 @@ const FormPageThree = (props) => {
                 <br />
                 <br />
 
-                <p className='consent'>By clicking “Yes” I provide my signature expressly consenting to contact from GetMyAutoInsured.com, its subsidiaries, affiliates, or agents, and up to eight of its Marketing Partners at the number I provided even if on a federal, state, or local do not call list regarding products or services via live, automated or prerecorded telephone call, text, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of any purchase. I understand that I can revoke this consent through any reasonable means. I agree to the Terms of Use and Privacy Policy</p>
+                <p className='consent'>By clicking “Yes” I provide my signature expressly consenting to contact from axrate.com, its subsidiaries, affiliates, or agents, and up to eight of its Marketing Partners at the number I provided even if on a federal, state, or local do not call list regarding products or services via live, automated or prerecorded telephone call, text, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of any purchase. I understand that I can revoke this consent through any reasonable means. I agree to the Terms of Use and Privacy Policy</p>
                 <br />
 
                 {/* <button onClick={props.last}>Previous</button> */}
-                <button onClick={props.longFormSubmit} className='form-btn'>Submit</button>
+                <button onClick={() => props.longFormSubmit(
+                    document.getElementById('age').value,
+                    document.getElementById('license-status').value,
+                    document.getElementById('credit').value,
+                    document.getElementById('vehicle-year').value,
+                    document.getElementById('vehicle-make').value,
+                    document.getElementById('vehicle-model').value,
+                    document.getElementById('vehicle-vin').value,
+                    document.getElementById('mileage').value
+                )} className='form-btn'>Submit</button>
             </div>
         </div>
     )

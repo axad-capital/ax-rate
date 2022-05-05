@@ -35,7 +35,7 @@ const FormPageTwo = (props) => {
 
                 <label htmlFor="stree-address">Street Address</label>
                 <br />
-                <input type="text" name="stree-address" id="stree-address" placeholder='Street Address' />
+                <input type="text" name="street-address" id="street-address" placeholder='Street Address' />
                 <br />
                 <br />
 
@@ -77,7 +77,19 @@ const FormPageTwo = (props) => {
 
             </div>
             <div className="form-page-two-btn">
-                <button onClick={props.next}>Next</button>
+                <button onClick={() => props.next(
+                    document.getElementById('first').value,
+                    document.getElementById('last').value,
+                    document.getElementById('email').value,
+                    document.getElementById('phone').value,
+                    document.getElementById('street-address').value,
+                    document.getElementById('state').value,
+                    document.getElementById('gender').value,
+                    document.getElementById('birth').value,
+                    document.getElementById('marital').value
+                )}>
+                    Next
+                </button>
 
             </div>
         </div>
