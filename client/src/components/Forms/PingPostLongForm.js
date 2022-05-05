@@ -40,18 +40,18 @@ const PingPostLongForm = () => {
 
         let storage = JSON.parse(localStorage.getItem('axrate-long-form-data'))
 
-        fetch('https://api.ipify.org/?format=json')
-            .then(result => result.json())
-            .then(ipData => {
+        // fetch('https://api.ipify.org/?format=json')
+        //     .then(result => result.json())
+        //     .then(ipData => {
 
-                let data = {
+                let userData = {
                     apiId: "1D39A9E077D948B1B578206F918FF5C0",
                     apiPassword: "a61268163",
                     productId: 187,
                     price: 0,
                     tcpa: "yes",
                     tcpaLanguage: "By clicking “Yes” I provide my signature expressly consenting to contact from axrate.com, its subsidiaries, affiliates, or agents, and up to eight of its Marketing Partners at the number I provided even if on a federal, state, or local do not call list regarding products or services via live, automated or prerecorded telephone call, text, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of any purchase. I understand that I can revoke this consent through any reasonable means. I agree to the Terms of Use and Privacy Policy",
-                    userIp: ipData.ip,
+                    // userIp: ipData.ip,
                     firstName: storage[3],
                     lastName: storage[4],
                     zip: storage[0],
@@ -79,10 +79,11 @@ const PingPostLongForm = () => {
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(userData)
                 })
-                console.log(data)
-            })
+                console.log(userData)
+
+            // })
 
     }
 
