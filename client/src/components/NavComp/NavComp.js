@@ -12,7 +12,7 @@ const NavComp = () => {
     <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light" id='bg-col'>
                 <div className="container-fluid">
-                    <Link to='/' className='navbar-brand'><img className='logo' src={Logo} alt='logo'/></Link>
+                    <Link to='/' className='navbar-brand'><img onClick={() => localStorage.clear()} className='logo' src={Logo} alt='logo'/></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

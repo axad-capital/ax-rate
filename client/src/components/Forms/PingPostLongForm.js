@@ -3,6 +3,7 @@ import FormPageOne from '../FormPages/FormPageOne'
 import FormPageTwo from '../FormPages/FormPageTwo'
 import FormPageThree from '../FormPages/FormPageThree'
 import LongFormImg from './long-form-img.png'
+import { v4 as uuidv4 } from 'uuid';
 
 const PingPostLongForm = () => {
 
@@ -46,7 +47,7 @@ const PingPostLongForm = () => {
             return
         }
 
-        if (first === "" || last === "" || email === "" || phone === "" || address ==="" || state === "" || isNaN(age)) {
+        if (first === "" || last === "" || email === "" || phone === "" || address === "" || state === "" || isNaN(age)) {
             setFormError("Missing fields.")
             return
         }
@@ -80,7 +81,8 @@ const PingPostLongForm = () => {
         storage.push(licenseAge, licenseStatus, credit, vehicleYear, make, model, VIN, mileage)
         localStorage.setItem('axrate-long-form-data', JSON.stringify(storage))
         sendToPipeDream()
-        window.location.href = '/thank-you-ping-form'
+
+        // window.location.href = '/thank-you-ping-form'
     }
 
     function sendToPipeDream() {
@@ -126,6 +128,19 @@ const PingPostLongForm = () => {
             body: JSON.stringify(userData)
         })
         console.log(userData)
+
+        let formData = {
+            zip: storage[0],
+            // birth: document.getElementById('birth').value,
+            // coverage: document.getElementById('coverage').value,
+            // homeOwner: document.getElementById('homeowner').value,
+            // insured: document.getElementById('insured').value,
+            id: uuidv4()
+        }
+
+        localStorage.setItem('ax-rate-data', JSON.stringify(formData))
+        window.location.href = '/thanks'
+
 
 
     }
