@@ -4,6 +4,7 @@ import HeaderImg from './ax-rate-header-img.png'
 import ShortForm from '../Forms/ShortForm'
 import LongForm from '../Forms/LongForm'
 import Footer from '../Footer/Footer'
+import AxCover from './axrate_cover.png'
 import { useLocation } from 'react-router-dom';
 
 const HomeComp = () => {
@@ -51,6 +52,10 @@ const HomeComp = () => {
         </div>
       </div>
 
+      <div className="coverImg">
+        <img className='axcover' src={AxCover} alt="get a quote" />
+      </div>
+
       <div className="why-container">
         <h1 className="why-title">Why Choose Ax Rate</h1>
         <p className="why-sub-title">Multiple reasons why you should choose us over other online providers</p>
@@ -75,15 +80,15 @@ const HomeComp = () => {
         </div>
 
         <div className="get-your-container">
-        <div className="get-your-info">
-          <h1 className="get-your-title">Get Your Auto Quote Today</h1>
-          <p className="get-your-sub-title">Join with over hundreds of customers in your area who already saved big</p>
+          <div className="get-your-info">
+            <h1 className="get-your-title">Get Your Auto Quote Today</h1>
+            <p className="get-your-sub-title">Join with over hundreds of customers in your area who already saved big</p>
+          </div>
+          <div className="get-quote-btn-container">
+            <a href='#form' className="get-quote-btn">Get Quotes Today</a>
+            <p className='get-quote-num'>Call (888) 431-2082 To Speak With Our Licensed Insurance Agents For Quick Assistance</p>
+          </div>
         </div>
-        <div className="get-quote-btn-container">
-          <a href='#form' className="get-quote-btn">Get Quotes Today</a>
-          <p className='get-quote-num'>Call (888) 431-2082 To Speak With Our Licensed Insurance Agents For Quick Assistance</p>
-        </div>
-      </div>
       </div>
       <Footer />
     </div>

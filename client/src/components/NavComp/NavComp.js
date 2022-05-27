@@ -2,7 +2,7 @@ import React from 'react'
 import './navComp.css'
 import { Link, useLocation } from 'react-router-dom';
 
-import Logo from './ax-rate-logo.png'
+import Logo from './AXRATE_Logo_Final_White_BG.png'
 
 const NavComp = () => {
 

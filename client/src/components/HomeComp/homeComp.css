@@ -1,3 +1,7 @@
+:root {
+    --mainColor: rgb(136, 48, 89);
+}
+
 .header-container {
     display: flex;
     width: 80%;
@@ -25,7 +29,7 @@
 .get-your-container {
     display: flex;
     align-items: center;
-    background-color: rgb(99, 45, 99);
+    background-color: var(--mainColor);
     color: white;
     justify-content: space-evenly;
     padding: 40px;
@@ -40,8 +44,8 @@
 
 .get-quote-btn {
     text-decoration: none;
-    background-color: rgb(167, 0, 83);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     font-weight: 600;
@@ -69,14 +73,24 @@
     max-width: 300px;
 }
 
-.how-it-works > h5 {
+.how-it-works>h5 {
     font-size: 25px;
     color: rgb(167, 0, 83);
 }
 
+.coverImg {
+    text-align: center;
+}
+
+.axcover {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
 .why-container {
-    margin-top: 50px;
-    background-color: rgb(99, 45, 99);
+    margin-top: 0px;
+    background-color: var(--mainColor);
     padding: 50px;
     color: white;
 }
@@ -99,7 +113,7 @@
     gap: 60px;
 }
 
-.whys > h2 {
+.whys>h2 {
     color: rgb(190, 190, 143);
 }
 
