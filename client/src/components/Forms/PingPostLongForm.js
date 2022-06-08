@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import FormPageOne from '../FormPages/FormPageOne'
 import FormPageTwo from '../FormPages/FormPageTwo'
 import FormPageThree from '../FormPages/FormPageThree'
+import FormPageFour from '../FormPages/FormPageFour'
 import LongFormImg from './long-form-img.png'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -65,7 +66,8 @@ const PingPostLongForm = () => {
         localStorage.clear()
     }
 
-    function longFormSubmit(licenseAge, licenseStatus, credit, vehicleYear, make, model, VIN, mileage) {
+
+    function nextForm3(licenseAge, licenseStatus, credit, vehicleYear, make, model, VIN, mileage) {
 
         if (vehicleYear.length !== 4) {
             setFormError("Year must be valid")
@@ -77,12 +79,23 @@ const PingPostLongForm = () => {
             return
         }
 
+        function getDailyMileage(mileage) {
+            return mileage / 365
+        }
+
         setFormError("")
-        storage.push(licenseAge, licenseStatus, credit, vehicleYear, make, model, VIN, mileage)
+        setShowForm(showForm + 1)
+        storage.push(licenseAge, licenseStatus, credit, vehicleYear, make, model, VIN, mileage, getDailyMileage(mileage))
+        localStorage.setItem('axrate-long-form-data', JSON.stringify(storage))
+    }
+
+
+    function longFormSubmit(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage) {
+
+        setFormError("")
+        storage.push(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage)
         localStorage.setItem('axrate-long-form-data', JSON.stringify(storage))
         sendToPipeDream()
-
-        // window.location.href = '/thank-you-ping-form'
     }
 
     function sendToPipeDream() {
@@ -117,7 +130,18 @@ const PingPostLongForm = () => {
             vehicle1Make: storage[16],
             vehicle1Model: storage[17],
             vehicle1Vin: storage[18],
-            vehicle1AnnualMileage: storage[19]
+            vehicle1AnnualMileage: storage[19],
+            vehicle1Submodel: storage[17],
+            vehicle1DailyMileage: storage[20],
+            monthsAtAddress: storage[21],
+            currentInsuranceExpirationDate: storage[22],
+            driver1Ticket1Date: storage[23],
+            driver1Violation1Date: storage[24],
+            driver1Accident1Date: storage[25],
+            driver1Claim1Date: storage[26],
+            driver1Claim1PaidAmount: [27],
+            requestedVehicleCollisionDeductibles: storage[28],
+            requestedPropertyDamage: storage[29]
         }
 
         fetch('https://en7v7smokhh637s.m.pipedream.net/', {
@@ -141,8 +165,6 @@ const PingPostLongForm = () => {
         localStorage.setItem('ax-rate-data', JSON.stringify(formData))
         window.location.href = '/thanks'
 
-
-
     }
 
     return (
@@ -160,7 +182,7 @@ const PingPostLongForm = () => {
                         <img className='long-form-img' src={LongFormImg} alt="form-img" />
                     </div>
                     <div className='long-form-form-container'>
-                        {showForm === 3 ? <FormPageThree errorText={formError} longFormSubmit={longFormSubmit} last={previousForm} /> : showForm === 2 ? <FormPageTwo errorText={formError} next={nextForm2} last={previousForm} /> : <FormPageOne next={nextForm1} errorText={formError} />}
+                        {showForm === 4 ? <FormPageFour errorText={formError} longFormSubmit={longFormSubmit} last={previousForm} /> : showForm === 3 ? <FormPageThree errorText={formError} next={nextForm3} last={previousForm} /> : showForm === 2 ? <FormPageTwo errorText={formError} next={nextForm2} last={previousForm} /> : <FormPageOne next={nextForm1} errorText={formError} />}
                     </div>
                 </div>
             </div>

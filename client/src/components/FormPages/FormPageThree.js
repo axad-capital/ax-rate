@@ -4,52 +4,12 @@ const FormPageThree = (props) => {
     return (
         <div>
             <div className="form-extra-info">
-                <h5 className='long-form-steps'>Step 3 of 3</h5>
+                <h5 className='long-form-steps'>Step 3 of 4</h5>
                 <div className='previous-container'>
                     <button id='previous' onClick={props.last}>Start Over</button>
                 </div>
                 <br />
-                {/* <label htmlFor="requested-coverage">Requested Insurance Coverage</label>
-                <br />
-                <select name="requested-coverage" id="requested-coverage">
-                    <option value="MINIMUM ($15K / $30K / $5K)">MINIMUM ($15K / $30K / $5K)</option>
-                    <option value="BASIC ($50K / $100K / $50K) ">BASIC ($50K / $100K / $50K) </option>
-                    <option value="STANARD ($100K / $300K / $100K)">STANARD ($100K / $300K / $100K)</option>
-                    <option value="SUPERIOR ($250K / $500K / $100K)">SUPERIOR ($250K / $500K / $100K)</option>
-                </select>
-                <br />
-                <br />
-
-                <label htmlFor="comprehensive">Requested Deductible For Comprehensive Coverage</label>
-                <br />
-                <select name="comprehensive" id="comprehensive">
-                    <option value="no-coverage">NO COVERAGE</option>
-                    <option value="D0">D0</option>
-                    <option value="D50">D50</option>
-                    <option value="D100">D100</option>
-                    <option value="D250">D250</option>
-                    <option value="D500">D500</option>
-                    <option value="D1000">D1000</option>
-                    <option value="D2500">D2500</option>
-                </select>
-                <br />
-                <br />
-
-                <label htmlFor="collision">Requested Deductible For Collision Coverage</label>
-                <br />
-                <select name="collision" id="collision">
-                    <option value="no-coverage">NO COVERAGE</option>
-                    <option value="D0">D0</option>
-                    <option value="D50">D50</option>
-                    <option value="D100">D100</option>
-                    <option value="D250">D250</option>
-                    <option value="D500">D500</option>
-                    <option value="D1000">D1000</option>
-                    <option value="D2500">D2500</option>
-                </select>
-                <br />
-                <br /> */}
-
+                
                 <label htmlFor="age">Age When First Licensed</label>
                 <br />
                 <input type="number" name="age" id="age" placeholder='Age' />
@@ -119,7 +79,7 @@ const FormPageThree = (props) => {
                 <br />
 
                 {/* <button onClick={props.last}>Previous</button> */}
-                <button onClick={() => props.longFormSubmit(
+                <button onClick={() => props.next(
                     document.getElementById('age').value,
                     document.getElementById('license-status').value,
                     document.getElementById('credit').value,
@@ -128,7 +88,7 @@ const FormPageThree = (props) => {
                     document.getElementById('vehicle-model').value,
                     document.getElementById('vehicle-vin').value,
                     document.getElementById('mileage').value
-                )} className='form-btn'>Submit</button>
+                )} className='form-btn'>Next</button>
             </div>
             <p style={{ textAlign: "center", color: "red", fontWeight: 600 }}>{props.errorText}</p>
         </div>

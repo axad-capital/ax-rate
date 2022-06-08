@@ -4,7 +4,7 @@ const FormPageTwo = (props) => {
     return (
         <div>
             <div className="form-extra-info">
-                <h5 className='long-form-steps'>Step 2 of 3</h5>
+                <h5 className='long-form-steps'>Step 2 of 4</h5>
                 <div className='previous-container'>
                     <button id='previous' onClick={props.last}>Start Over</button>
                 </div>
