@@ -154,6 +154,12 @@ const FormPageFour = (props) => {
                 <br />
                 <br />
 
+                <label htmlFor="current-insurance-company">If you are currently insured, what is the name of the insurance company?</label>
+                <br />
+                <input type="text" name="current-insurance-company" id="current-insurance-company" />
+                <br />
+                <br />
+
                 <button onClick={() => props.longFormSubmit(
                     document.getElementById('months-address').value,
                     document.getElementById('current-insure-ex').value,
@@ -164,7 +170,8 @@ const FormPageFour = (props) => {
                     document.getElementById('claim-pay').value,
                     document.getElementById('collision-deduct').value,
                     document.getElementById('property-damage').value,
-                    document.getElementById('months-insured').value
+                    document.getElementById('months-insured').value,
+                    document.getElementById('current-insurance-company').value
                 )} className='form-btn'>SUBMIT</button>
             </div>
             <p style={{ textAlign: "center", color: "red", fontWeight: 600 }}>{props.errorText}</p>

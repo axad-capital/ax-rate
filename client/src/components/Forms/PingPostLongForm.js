@@ -95,10 +95,10 @@ const PingPostLongForm = () => {
     }
 
 
-    function longFormSubmit(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage, monthsInsured) {
+    function longFormSubmit(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage, monthsInsured, currentInsuranceCompany) {
 
         setFormError("")
-        storage.push(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage, monthsInsured)
+        storage.push(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage, monthsInsured, currentInsuranceCompany)
         localStorage.setItem('axrate-long-form-data', JSON.stringify(storage))
         sendToPipeDream()
     }
@@ -148,7 +148,8 @@ const PingPostLongForm = () => {
             requestedVehicleCollisionDeductibles: storage[28],
             requestedPropertyDamage: storage[29],
             continuouslyInsuredPeriod: storage[30],
-            driver1LicenseState: storage[8]
+            driver1LicenseState: storage[8],
+            currentInsuranceCompany: storage[31]
         }
 
         fetch('https://en7v7smokhh637s.m.pipedream.net/', {
