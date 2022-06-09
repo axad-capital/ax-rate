@@ -133,6 +133,27 @@ const FormPageFour = (props) => {
                 <br />
                 <br />
 
+                <label htmlFor="months-insured">How long have you currently been insured?</label>
+                <br />
+                <select name="months-insured" id="months-insured">
+                    <option value="">I am not insured</option>
+                    <option value="1">1 month</option>
+                    <option value="2">2 months</option>
+                    <option value="3">3 months</option>
+                    <option value="4">4 months</option>
+                    <option value="5">5 months</option>
+                    <option value="6">6 months</option>
+                    <option value="7">7 months</option>
+                    <option value="8">8 months</option>
+                    <option value="9">9 months</option>
+                    <option value="10">10 months</option>
+                    <option value="11">11 months</option>
+                    <option value="12">12 months</option>
+                    <option value="More than 12">More than 12 months</option>
+                </select>
+                <br />
+                <br />
+
                 <button onClick={() => props.longFormSubmit(
                     document.getElementById('months-address').value,
                     document.getElementById('current-insure-ex').value,
@@ -142,7 +163,8 @@ const FormPageFour = (props) => {
                     document.getElementById('claim-date').value,
                     document.getElementById('claim-pay').value,
                     document.getElementById('collision-deduct').value,
-                    document.getElementById('property-damage').value
+                    document.getElementById('property-damage').value,
+                    document.getElementById('months-insured').value
                 )} className='form-btn'>SUBMIT</button>
             </div>
             <p style={{ textAlign: "center", color: "red", fontWeight: 600 }}>{props.errorText}</p>

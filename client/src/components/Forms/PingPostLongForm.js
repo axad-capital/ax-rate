@@ -79,8 +79,13 @@ const PingPostLongForm = () => {
             return
         }
 
+        if (VIN.length !== 17) {
+            setFormError("Invalid VIN")
+            return
+        }
+
         function getDailyMileage(mileage) {
-            return mileage / 365
+            return parseInt(mileage / 365)
         }
 
         setFormError("")
@@ -90,10 +95,10 @@ const PingPostLongForm = () => {
     }
 
 
-    function longFormSubmit(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage) {
+    function longFormSubmit(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage, monthsInsured) {
 
         setFormError("")
-        storage.push(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage)
+        storage.push(monthsAddress, currentInsureExpiration, ticketDate, violationDate, accidentDate, claimDate, claimPay, collisionDeduct, propertyDamage, monthsInsured)
         localStorage.setItem('axrate-long-form-data', JSON.stringify(storage))
         sendToPipeDream()
     }
@@ -141,7 +146,9 @@ const PingPostLongForm = () => {
             driver1Claim1Date: storage[26],
             driver1Claim1PaidAmount: [27],
             requestedVehicleCollisionDeductibles: storage[28],
-            requestedPropertyDamage: storage[29]
+            requestedPropertyDamage: storage[29],
+            continuouslyInsuredPeriod: storage[30],
+            driver1LicenseState: storage[8]
         }
 
         fetch('https://en7v7smokhh637s.m.pipedream.net/', {
