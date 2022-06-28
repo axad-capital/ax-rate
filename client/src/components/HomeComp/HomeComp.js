@@ -18,7 +18,7 @@ const HomeComp = () => {
           <h1 className="header-title">Get A Quote And Cut Down Your Auto Insurance Rates</h1>
           <h3 className="header-sub-title">Start requesting your personalized car insurance quotes in just minutes. We will match you with insurers that best fit your needs and budget.</h3>
           <div id='form' className="form">
-            {location.pathname === '/' ? <ShortForm /> : <LongForm />}
+            {location.pathname === '/' || location.pathname === '/goog' || location.pathname === '/fb' ? <ShortForm /> : <LongForm />}
           </div>
         </div>
         <div className="header-img-container">
