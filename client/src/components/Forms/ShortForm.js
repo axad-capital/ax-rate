@@ -20,9 +20,9 @@ const ShortForm = () => {
 
     localStorage.setItem('ax-rate-data', JSON.stringify(formData))
 
-    if (url.pathname === '/goog') {
+    if (url.pathname.split('/')[1] === 'goog') {
       window.location.href = '/thanks/goog'
-    } else if (url.pathname === '/fb') {
+    } else if (url.pathname.split('/')[1] === 'fb') {
       window.location.href = '/thanks/fb'
     } else {
       window.location.href = '/thanks'
