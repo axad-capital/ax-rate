@@ -88,7 +88,7 @@ const HomeComp = () => {
           <div className="get-quote-btn-container">
             <a href='#form' className="get-quote-btn">Get Quotes Today</a>
 
-            {location.pathname === '/goog' ? <p className='get-quote-num'>Call <a style={{textDecoration: 'none', fontSize: '20px', color: 'white'}} href='tel:18777110738'>1(877)711-0738</a> To Speak With Our Licensed Insurance Agents For Quick Assistance</p> : location.pathname === '/fb' ? <p className='get-quote-num'>Call <a style={{textDecoration: 'none', fontSize: '20px', color: 'white'}} href='tel:18775573335'>1(877)557-3335</a> To Speak With Our Licensed Insurance Agents For Quick Assistance</p> : <p className='get-quote-num'>Call <a style={{textDecoration: 'none', fontSize: '20px', color: 'white'}} href='tel:8884312082'>(888) 431-2082</a> To Speak With Our Licensed Insurance Agents For Quick Assistance</p>}
+            {location.pathname.split('/')[1] === 'goog' ? <p className='get-quote-num'>Call <a style={{textDecoration: 'none', fontSize: '20px', color: 'white'}} href='tel:18777110738'>1(877)711-0738</a> To Speak With Our Licensed Insurance Agents For Quick Assistance</p> : location.pathname.split('/')[1] === 'fb' ? <p className='get-quote-num'>Call <a style={{textDecoration: 'none', fontSize: '20px', color: 'white'}} href='tel:18775573335'>1(877)557-3335</a> To Speak With Our Licensed Insurance Agents For Quick Assistance</p> : <p className='get-quote-num'>Call <a style={{textDecoration: 'none', fontSize: '20px', color: 'white'}} href='tel:8884312082'>(888) 431-2082</a> To Speak With Our Licensed Insurance Agents For Quick Assistance</p>}
           </div>
         </div>
       </div>
