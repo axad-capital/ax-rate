@@ -1,0 +1,13 @@
+.transparently {
+    border: 1px solid black;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(236, 246, 254);
+}
