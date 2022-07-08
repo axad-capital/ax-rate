@@ -26,6 +26,7 @@ function App() {
           <Route exact path='/goog' element={<HomePage />} />
           <Route exact path='/fb' element={<HomePage />} />
           <Route exact path='/sem' element={<HomePage />} />
+          <Route exact path='/dsp' element={<HomePage />} />
           <Route exact path='/get-quote' element={<HomePage />} />
           <Route exact path='/about-us' element={<About />} />
           <Route exact path='/info' element={<Info />} />
