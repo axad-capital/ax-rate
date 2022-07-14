@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './form.css'
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { useLocation } from 'react-router-dom';
 
 const ShortForm = () => {
@@ -11,7 +11,7 @@ const ShortForm = () => {
 
   function handleFormSub(url) {
 
-    if (document.getElementById('state').value === '' || document.getElementById('home-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
+    if (document.getElementById('state').value === '' || document.getElementById('zip').value === '' || document.getElementById('home-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
       setBlankHandler('All fields required')
       return
     }
@@ -29,6 +29,13 @@ const ShortForm = () => {
       "homeowner": document.getElementById('home-owner').value,
       "currentlyinsured": document.getElementById('insured').value
     }
+
+    let formData = {
+      zip: document.getElementById('zip').value,
+      id: uuidv4()
+    }
+
+    localStorage.setItem('ax-rate-data', JSON.stringify(formData))
 
     fetch('https://api.transparent.ly/search/blue/green', {
       method: 'POST',
@@ -49,27 +56,16 @@ const ShortForm = () => {
         }
       })
 
-    // let formData = {
-    //   zip: document.getElementById('zip').value,
-    //   // birth: document.getElementById('birth').value,
-    //   // coverage: document.getElementById('coverage').value,
-    //   // homeOwner: document.getElementById('homeowner').value,
-    //   // insured: document.getElementById('insured').value,
-    //   id: uuidv4()
-    // }
-
-    // localStorage.setItem('ax-rate-data', JSON.stringify(formData))
-
   }
 
   return (
     <div>
       <div className="short-form">
 
-        {/* <label htmlFor="zip">Enter Your Zipcode</label>
+        <label htmlFor="zip">Enter Your Zipcode</label>
         <br />
         <input type="number" name="zip" id="zip" placeholder='Zipcode' />
-        <br /> */}
+        <br />
 
         <label htmlFor="state"><strong>Please choose the current state you're in</strong></label>
         <select id='state' className='form-input' name="state">
@@ -147,7 +143,11 @@ const ShortForm = () => {
         <button onClick={() => handleFormSub(location)}>Submit</button>
         <p style={{ color: 'red', textAlign: 'center' }} >{blankHandler}</p>
 
-        {location.pathname.split('/')[1] === 'goog' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18777110738'>1(877)711-0738</a></p> : location.pathname.split('/')[1] === 'dsp' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18664140150'>1(866)414-0150</a></p> : location.pathname.split('/')[1] === 'fb' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18775573335'>1(877)557-3335</a></p> : <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:8884312082'>(888) 431-2082</a></p>}
+        {location.pathname.split('/')[1] === 'dsp-prop-pop' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18447992424'>1(844)799-2424</a></p> :
+          location.pathname.split('/')[1] === 'goog' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18777110738'>1(877)711-0738</a></p> :
+            location.pathname.split('/')[1] === 'dsp' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18664140150'>1(866)414-0150</a></p> :
+              location.pathname.split('/')[1] === 'fb' ? <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:18775573335'>1(877)557-3335</a></p> :
+                <p style={{ textAlign: 'center' }}>Need A Quote Quick? Contact Our Licensed Insurance Agents At <a style={{ textDecoration: 'none', fontSize: '20px' }} href='tel:8884312082'>(888) 431-2082</a></p>}
 
         <p className="consent">By clicking “Yes” I provide my signature expressly consenting to contact from Allied Insurance Partners, its subsidiaries, affiliates, or agents, and up to eight of its Marketing Partners at the number I provided even if on a federal, state, or local do not call list regarding products or services via live, automated dialing system or prerecorded telephone call, text, or email. I understand that my telephone company may impose charges on me for these contacts, and I am not required to enter into this agreement as a condition of any purchase. I understand that I can revoke this consent through any reasonable means. I agree to the Terms of Use and Privacy Policy. California Residents</p>
       </div>

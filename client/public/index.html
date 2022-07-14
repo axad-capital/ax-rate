@@ -54,7 +54,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -96,8 +96,8 @@
 
 
   <!-- insurance clicks -->
-  <!-- <script>
-    if (window.location.href === 'http://localhost:3000/thanks' || window.location.href === 'https://axrate.netlify.app/thanks' || window.location.href === 'https://www.axrate.com/thanks' || window.location.href === 'http://localhost:3000/thanks-long' || window.location.href === 'https://axrate.netlify.app/thanks-long' || window.location.href === 'https://www.axrate.com/thanks-long' || window.location.href === 'https://www.axrate.com/thanks/goog' || window.location.href === 'https://www.axrate.com/thanks/fb') {
+  <script>
+    if (window.location.href === 'https://www.axrate.com/thanks' || window.location.href === 'https://www.axrate.com/thanks-long' || window.location.href === 'https://www.axrate.com/thanks/goog' || window.location.href === 'https://www.axrate.com/thanks/fb') {
       let data = JSON.parse(localStorage.getItem('ax-rate-data'))
       console.log('auto');
 
@@ -117,35 +117,10 @@
         document.getElementsByTagName('script')[0],
         'https://www.insuranceclicks.com/iClickListing/RenderListing.js');
     } else {
-      localStorage.clear()
+      localStorage.removeItem('ax-rate-data')
     }
-  </script> -->
+  </script>
   <!-- insurance clicks end -->
-
-  <!-- <script>
-    if (window.location.href === 'http://localhost:3000/thanks-long' || window.location.href === 'https://axrate.netlify.app/thanks-long' || window.location.href === 'https://axrate.com/thanks-long') {
-      let dataLong = JSON.parse(localStorage.getItem('ax-rate-data-long'))
-      console.log('auto');
-
-      cInsstate = ""; //State ID For Example: AL
-      cInszip = dataLong.zip; // Zip Code For Example: 35004
-      cInsmaxads = "5"; //Max ads the affiliate want to display
-      cInspublisher_id = "887"; // Publisher Unique ID
-      cInssub_id = ""; //Sub ID
-      cInspub_id = ""; //Pub ID
-      cInsinsurancetype = "auto"; //Insurance type ( life, auto, health, home, medicare )
-      !function (e, f, u) {
-        e.async = 1;
-        e.src = u;
-        document.write('<div id="iClickContainer"></div>');
-        f.parentNode.insertBefore(e, f);
-      }(document.createElement('script'),
-        document.getElementsByTagName('script')[0],
-        'https://www.insuranceclicks.com/iClickListing/RenderListing.js');
-    } else {
-      localStorage.clear()
-    }
-  </script> -->
 
   <!-- everflow start -->
   <script type="text/javascript" src="https://www.a1jkghtrk.com/scripts/sdk/everflow.js"></script>

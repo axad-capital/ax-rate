@@ -1,6 +1,6 @@
 import React from 'react'
 import './navComp.css'
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import Logo from './AXRATE_Logo_Final_White_BG.png'
 
@@ -12,7 +12,7 @@ const NavComp = () => {
     <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light" id='bg-col'>
                 <div className="container-fluid">
-                    <Link to='/' className='navbar-brand'><img onClick={() => localStorage.clear()} className='logo' src={Logo} alt='logo'/></Link>
+                    <img onClick={() => localStorage.clear()} className='logo' src={Logo} alt='logo'/>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -49,7 +49,7 @@ const Thanks = () => {
           <h1 style={{ textAlign: 'center' }}>Get A Free Auto Insurance Quote From The Companies Below</h1>
           <br />
           <br />
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center'}}>
             <a href="https://insuranceratesguru.com/?utm_source=native&utm_medium=native&placement=2a5bcb2a-b236-4da7-a595-ed1207a1c898&sub1=38774aad169a4107bda08ee6ac8c6dcd&sub2=4088"><img style={{ width: "100%", maxWidth: '350px' }} src='/images/IR-GuruLOGO.png' alt="insurance Rates Guru" /></a>
             <br />
             <br />
