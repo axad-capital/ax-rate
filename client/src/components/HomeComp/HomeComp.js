@@ -6,6 +6,7 @@ import LongForm from '../Forms/LongForm'
 import Footer from '../Footer/Footer'
 import AxCover from './axrate_cover.png'
 import { useLocation } from 'react-router-dom';
+import QuinnSearchForm from '../QuinnSearchForm/QuinnSearchForm'
 
 const HomeComp = () => {
 
@@ -19,7 +20,7 @@ const HomeComp = () => {
           <h3 className="header-sub-title">Start requesting your personalized car insurance quotes in just minutes. We will match you with insurers that best fit your needs and budget.</h3>
           <div id='form' className="form">
             {/* {location.pathname === '/' || location.pathname === '/goog' || location.pathname === '/fb' ? <ShortForm /> : <LongForm />} */}
-            {location.pathname === '/get-quote' || location.pathname === '/sem' ? <LongForm /> : <ShortForm />}
+            {location.pathname === '/goog' ? <QuinnSearchForm/> : location.pathname === '/get-quote' || location.pathname === '/sem' ? <LongForm /> : <ShortForm />}
           </div>
         </div>
         <div className="header-img-container">
