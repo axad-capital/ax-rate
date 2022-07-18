@@ -51,6 +51,8 @@ const ShortForm = () => {
           window.location.href = '/thanks/goog'
         } else if (url.pathname.split('/')[1] === 'fb') {
           window.location.href = '/thanks/fb'
+        } else if (url.pathname.split('/')[1] === 'dsp-prop-pop') {
+          window.location.href = '/thanks-prop-pop'
         } else {
           window.location.href = '/thanks'
         }
