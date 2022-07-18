@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThankPropPop = () => {
+const ThanksDSP= () => {
     return (
         <div>
             <h1 style={{ textAlign: 'center' }}>Get A Free Auto Insurance Quote From The Companies Below</h1>
@@ -26,4 +26,4 @@ const ThankPropPop = () => {
     )
 }
 
-export default ThankPropPop
+export default ThanksDSP

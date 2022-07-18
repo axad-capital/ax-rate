@@ -15,7 +15,7 @@ import PingPostLongForm from './components/Forms/PingPostLongForm';
 import ThanksPing from './components/Thanks/ThanksPing';
 import ThanksGoog from './components/Thanks/ThanksGoog';
 import ThanksFb from './components/Thanks/ThanksFb';
-import ThankPropPop from './components/Thanks/ThankPropPop';
+import ThanksDSP from './components/Thanks/ThanksDSP';
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
           <Route exact path='/disclaimer' element={<Disclaimer />} />
           <Route exact path='/partners' element={<Partners />} />
           <Route exact path='/thanks' element={<Thanks />} />
-          <Route exact path='/thanks-prop-pop' element={<ThankPropPop />} />
+          <Route exact path='/thanks-dsp' element={<ThanksDSP />} />
           <Route exact path='/thanks-long' element={<ThanksLong />} />
           <Route exact path='/long-quote' element={<PingPostLongForm />} />
           <Route exact path='/thank-you-ping-form' element={<ThanksPing />} />
